@@ -17,7 +17,7 @@
 
 \section{Solution to Section 1.4}
 \subsection{Solution to Part A}
-Part A states that we need to set up a linearly separable data set with size 20.  There is a webstie for this that professor Rivas recommended we use. This website is found at \href{https://datasciencelab.wordpress.com/2014/01/10/machine-learning-classics-the-perceptron/}{The Data Science Lab}. The code from this website is saved in the baker-01 folder as Perceptron.py. After importing this class, there was one edit I had to make. The edit was to import the pyplot class from matplotlib as plt. The result of this is \ref {fig:PartA}
+Part A states that we need to set up a linearly separable data set with size 20.  There is a webstie for this that professor Rivas recommended we use. This website is found at The Data Science Lab\cite[]{citation01}. The code from this website is saved in the baker-01 folder as Perceptron.py. After importing this class, there was one edit I had to make. The edit was to import the pyplot class from matplotlib as plt. The result of this is \ref {fig:PartA}
 
 
 \begin{figure}
@@ -99,5 +99,22 @@ Part E states that we need to run the perceptron learning algorithm on a set of 
   \label{fig:PartE3}
 \end{figure}
 
+\subsection{Solution to Part F}
+Part F needs us to edit the algorithm to fit 10 dimensions. This can be done by editing the code to include the distance function for 10 dimensions, which is pretty long. And after 828 updates, the algorithm stopped.
 
+\subsection{Solution to Part G}
+Part G wants us to take part F and run the algorithm 100 times, with finding a rnadom x(t) instead of determining it. While doing this experiment, I ran into a problem where Icouldn't record some of the runs because there were so many iterations of the algorithm.
+
+\subsection{solution to Part H}
+I don't know what the book means by a function using N and d, but I have found that using a bigger data set requires a bigger load, and more dimensions means more updates.
+
+\begin{thebibliography}{9}
+
+\bibitem{citation01}
+  The Data Science Lab,
+  \emph{Machine Learning Classics: The Perceptron Learning Algorithm},
+   \url{https://datasciencelab.wordpress.com/2014/01/10/machine-learning-classics-the-perceptron/}
+
+\end{thebibliography}
 \end{document}
+

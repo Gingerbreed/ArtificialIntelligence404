@@ -1,2 +1,5 @@
 
- @misc{2014, title={Machine Learning Classics: The Perceptron}, url={https://datasciencelab.wordpress.com/2014/01/10/machine-learning-classics-the-perceptron/}, journal={The Data Science Lab}, author={@DataScienceLab}, year={2014}, month={Jan}} The website Professor Rivas recommended we use to get the Perceptron class.
+ @misc{2014, title={Machine Learning Classics: The Perceptron},
+ url={https://datasciencelab.wordpress.com/2014/01/10/machine-learning-classics-the-perceptron/},
+ journal={The Data Science Lab}, author={@DataScienceLab}, year={2014}, month={Jan}} The website
+ Professor Rivas recommended we use to get the Perceptron class.

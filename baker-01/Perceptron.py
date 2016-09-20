@@ -78,12 +78,12 @@ class Perceptron:
             x, s = self.choose_miscl_point(w)
             # Update weights
             w += s*x
-            if save:
-                self.plot(vec=w)
-                plt.title('N = %s, Iteration %s\n' \
-                          % (str(N),str(it)))
-                plt.savefig('p_N%s_it%s' % (str(N),str(it)), \
-                            dpi=200, bbox_inches='tight')
+        if save:
+            self.plot(vec=w)
+            plt.title('N = %s, Iteration %s\n' \
+                     % (str(N),str(it)))
+            plt.savefig('p_N%s_it%s' % (str(N),str(it)), \
+                        dpi=200, bbox_inches='tight')
         self.w = w
  
     def check_error(self, M, vec):
