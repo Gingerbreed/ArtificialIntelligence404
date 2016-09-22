@@ -1,28 +1,21 @@
 import numpy as np
-import matplotlib.pyplot as plt
 import random
 import os, subprocess
  
-class Perceptron:
+class Perceptron10:
     def __init__(self, N):
         # Random linearly separated data
-		# if using 10 dimensions, uncomment the commented line and comment out the first two lines
-		#xA,yA,xB,yB = [random.uniform(-1, 1) for i in range(4)]
-		#self.V = np.array([xB*yA-xA*yB, yB-yA, xA-xB])
-		#for 10 dimensions
-		self.V = (np.random.rand(11)*2)-1
+        self.V = (np.random.rand(11)*2)-1
         self.X = self.generate_points(N)
  
     def generate_points(self, N):
         X = []
         for i in range(N):
-			#x1,x2 = [random.uniform(-1, 1) for i in range(2)]
-			#for 10 dimensions
-			x1,x2,x3,x4,x5,x6,x7,x8,x9,x10 = [random.uniform(-1, 1) for i in range(10)]
-			x = np.array([1,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10])
-			s = int(np.sign(self.V.T.dot(x)))
-			X.append((x, s))
-		return X
+            x1,x2,x3,x4,x5,x6,x7,x8,x9,x10 = [random.uniform(-1, 1) for i in range(10)]
+            x = np.array([1,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10])
+            s = int(np.sign(self.V.T.dot(x)))
+            X.append((x, s))
+        return X
  
     def plot(self, mispts=None, vec=None, save=False):
         fig = plt.figure(figsize=(5,5))
@@ -71,10 +64,9 @@ class Perceptron:
                 mispts.append((x, s))
         return mispts[random.randrange(0,len(mispts))]
  
-    def pla(self, save=False):
+    def pla(self):
         # Initialize the weigths to zeros
-        #w = np.zeros(3)
-		w = np.zeros(11)
+        w = np.zeros(11)
         X, N = self.X, len(self.X)
         it = 0
         # Iterate until all points are correctly classified
@@ -84,14 +76,18 @@ class Perceptron:
             x, s = self.choose_miscl_point(w)
             # Update weights
             w += s*x
-		print it
-        if save:
-            self.plot(vec=w)
-            plt.title('N = %s, Iteration %s\n' \
-                     % (str(N),str(it)))
-            plt.savefig('p_N%s_it%s' % (str(N),str(it)), \
-                        dpi=200, bbox_inches='tight')
-        self.w = w
+            self.w = w 
+            print (it)
+        return it
+ 
+    def pla_loop(self, N):
+         #Create the array
+         a = []
+         x = 0
+         for x in range(N):
+             a.insert(x, self.pla())
+             x += 1
+         print(a)
  
     def check_error(self, M, vec):
         check_pts = self.generate_points(M)

@@ -100,10 +100,22 @@ Part E states that we need to run the perceptron learning algorithm on a set of 
 \end{figure}
 
 \subsection{Solution to Part F}
-Part F needs us to edit the algorithm to fit 10 dimensions. This can be done by editing the code to include the distance function for 10 dimensions, which is pretty long. And after 828 updates, the algorithm stopped.
+Part F needs us to edit the algorithm to fit 10 dimensions. I edited the code to use the random option. This file is found in Perceptron10.py. I ran the pla method once, and after 8266 updates, the algorithm stopped. What have I got myself into? Proof is in Figure \ref{fig:PartF}.
+
+\begin{figure}
+  \includegraphics[width=9cm,height=9cm]{10DimensionConvergence.png}
+  \caption{The final iteration using a set of 1000 plot points from 10 Dimensions(!), and LaTeX on the right.}
+  \label{fig:PartF}
+\end{figure}
 
 \subsection{Solution to Part G}
-Part G wants us to take part F and run the algorithm 100 times, with finding a rnadom x(t) instead of determining it. While doing this experiment, I ran into a problem where Icouldn't record some of the runs because there were so many iterations of the algorithm.
+Part G wants us to take part F and run the algorithm 100 times, with finding a random x(t) instead of determining it. To do this, I created the plaloop method, because i didn't want to hit the enter key 100 times. After a trip to McDonald's, the algorithm finished. The plot of point can be seen in this figure \ref{fig:PartG}.
+
+\begin{figure}
+  \includegraphics[width=9cm,height=9cm]{histogram.png}
+  \caption{The results of running the perceptron learning algorithm with 1000 points 100 times. This took a while.}
+  \label{fig:PartG}
+\end{figure}
 
 \subsection{solution to Part H}
 I don't know what the book means by a function using N and d, but I have found that using a bigger data set requires a bigger load, and more dimensions means more updates.
@@ -117,4 +129,3 @@ I don't know what the book means by a function using N and d, but I have found t
 
 \end{thebibliography}
 \end{document}
-
