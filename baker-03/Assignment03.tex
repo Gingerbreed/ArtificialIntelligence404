@@ -19,7 +19,7 @@
 This was the only question on the assignment. The question was to take random sets of data, and run three different algorithms on them. The first was to run the Pocket Algorithm. The second was to create a Linear Regression algorithm that functioned as a classification algorithm. The third instruction was to make the Pocket Algorithm start when the LInear Algorithm was finished. What follows are the results.
 
 \subsection{Just Running The Pocket Algorithm}
-This algorithm tried to run. Unfortunately, I kept running into the error in Figure \ref{fig:Figure1}. This error is most likely coming from the generate code and the perceptron algorithm not being able to agree. However, I predict that this kind of algorithm would be more accurate than the use of linear regression, but this would certainly take longer, because of the different times the w is generated but not updated. 
+This algorithm tried to run. Unfortunately, I kept running into the error in Figure \ref{fig:Figure1}. This error is most likely coming from the generate code and the perceptron algorithm not being able to agree. However, I predict that this kind of algorithm would be more accurate than the use of linear regression, but this would certainly take longer, because of the different times the w is generated but not updated. I'm predicting the Eout of this algorithm to be high, but so is the computation required.
 \begin{figure}
   \includegraphics[width=\linewidth]{broken.png}
   \caption{The error from the method classification error.}
@@ -27,9 +27,9 @@ This algorithm tried to run. Unfortunately, I kept running into the error in Fig
 \end{figure}
 
 \subsection{Just Running Linear Regression as a Classifier}
-This algorithm runs fast, but doesn't really provide an accurate weight. The usefulness of this alogrithm comes into play when the user needs something fast and dirty without the need for accuracy.
+This algorithm runs fast, but doesn't really provide an accurate weight. The usefulness of this alogrithm comes into play when the user needs something fast and dirty without the need for accuracy.This doesn't require much computation, but you get what you give, low computation, low accuracy.
 
 \subsection{Running `The Best of Both Worlds' Algorithm }
-This algortihm takes both of the previous algorithms and takes the best of both. The boosted weight from linear regression (which has fast runtime but low accuracy) helps the pocket algorithm (slow runtime but very accurate) jump a few weights ahead, cutting some time from the algorithm. Once again, I wasn't able to test this because of the errors in classification error, and these are just my predictions.
+This algortihm takes both of the previous algorithms and takes the best of both. The boosted weight from linear regression (which has fast runtime but low accuracy) helps the pocket algorithm (slow runtime but very accurate) jump a few weights ahead, cutting some time from the algorithm. This seems to be the perfect balance of speed and accuracy, with both Eout being accurate and the computational requirements not being such a burden. Once again, I wasn't able to test this because of the errors in classification error, and these are just my predictions.
 
 \end{document}
