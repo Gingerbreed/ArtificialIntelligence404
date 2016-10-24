@@ -34,6 +34,7 @@ class Equation:
             self.n.append(N)
 
             N = self.plugnchug(N)
+            print N
 
         return N
 

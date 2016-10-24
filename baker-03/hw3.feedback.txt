@@ -1,0 +1,29 @@
+40 pts
+
+Morgan,
+
+Here is the breakdown of your grade and feedback by parts:
+
+a) Pocket Algorithm starting at w=0
+
+- It seems like the error could be several different things. The code in your
+  repository gives me no error but does not produce any results either. You
+  must work a bit harder trying to understand and debug your code. -10pts
+
+b) Linear Regression as classification
+
+- You reported no E_out -5pts
+
+b) Pocket Algorithm starting with Linear Regression
+
+- Same as a)
+
+- Good intuition though
+
+
++5pts for using LaTeX
+
+
+Peace,
+- Dr. Rivas
+
